@@ -13,7 +13,7 @@ export default function Graph() {
     datasets: [
       {
         label: "Accuracy",
-        data: [89, 95, 78, 83],
+        data: [51, 87, 94 , 78],
         backgroundColor: [
           "rgba(255, 99, 132, 0.2)",
           "rgba(54, 162, 235, 0.2)",

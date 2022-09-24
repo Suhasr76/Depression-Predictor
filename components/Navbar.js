@@ -29,9 +29,9 @@ export default function Navbar() {
               <a>Home</a>
             </Link>
           </div>
-          <div className=" px-2 py-2 font-bold mx-3 text-center h-10 w-40 rounded-lg  bg-transparent text-sky-400 hover:bg-sky-700">
+          <div className=" px-2 py-2   font-bold ml-3 text-center h-10 w-50 rounded-lg  bg-transparent text-sky-400 hover:bg-sky-700">
             <Link href="/">
-              <a>Techniques</a>
+              <a>Models and Dataset</a>
             </Link>
           </div>
         </div>
