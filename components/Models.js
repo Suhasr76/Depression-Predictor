@@ -1,5 +1,6 @@
 import React from "react";
 import YouTube from "react-youtube";
+import Graph from "./Graph";
 
 export default function Models() {
   const opts = {
@@ -13,47 +14,52 @@ export default function Models() {
   //   event.target.pauseVideo();}
   return (
     <div className="bg-[url('/backgrounIndex.jpg')] min-w-screen bg-cover    ">
-      <p className="text-white font-extrabold text-center pt-10 text-4xl">
+      <p
+        id="dataset"
+        className="text-white font-extrabold text-center pt-[80px] text-4xl"
+      >
         The Dataset collected had 11 columns which includes the following
       </p>
       <div
-        className="grid grid-cols-5 w-full gap-2 py-10 mx-4 text-white content-center
+        className="grid grid-cols-3 w-[90vw] gap-[40px] py-10 mx-10 text-white content-center
           text-center"
       >
-        <label className="  text-sky-400 border-4 border-red-400">Index</label>
-        <label className="  text-gray-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all text-sky-400 ring-2 ring-gray-300">
+          Index
+        </label>
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all text-gray-400 ring-2 ring-gray-300">
           post_id
         </label>
-        <label className="   text-sky-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all  text-sky-400 ring-2 ring-gray-300">
           post_created
         </label>
-        <label className="  text-gray-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all text-gray-400 ring-2 ring-gray-300">
           post_text
         </label>
-        <label className="   text-sky-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all  text-sky-400 ring-2 ring-gray-300">
           user_id
         </label>
-        <label className="   text-gray-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all  text-gray-400 ring-2 ring-gray-300">
           followers
         </label>
-        <label className="   text-sky-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all  text-sky-400 ring-2 ring-gray-300">
           friends
         </label>
-        <label className="  text-gray-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all text-gray-400 ring-2 ring-gray-300">
           favourites
         </label>
-        <label className="  text-sky-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all text-sky-400 ring-2 ring-gray-300">
           statuses
         </label>
-        <label className="  text-gray-400 border-4 border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all text-gray-400 ring-2 ring-gray-300">
           retweets
         </label>
-        <label className="  text-sky-400 border-4   border-red-400">
+        <label className="py-2 mx-10 hover:shadow-md hover:shadow-blue-500 hover:ring-blue-400 transition-all text-sky-400 ring-2   ring-gray-300">
           label
         </label>
       </div>
 
-      <div className="flex flex-row space-x-20 mx-20 py-10 ">
+      <div id="models" className=" flex flex-row space-x-20 mt-10 mx-20 py-10 ">
         <p className="text-sky-400 text-2xl font-extrabold text-center">
           Using the above columns correlation between different sets of columns
           has been found. Out of all the columns the one which mattered the most
@@ -144,6 +150,12 @@ export default function Models() {
             <br />
           </div>
         </div>
+      </div>
+      <div id="accuracy" className="grid mt-10  place-items-center mx-5">
+        <div className="  text-gray-200 font-mono text-4xl font-bold mx-30">
+          Accuracy of our models
+        </div>
+        <Graph />
       </div>
       {/* <div class="divleft">
         <h2>

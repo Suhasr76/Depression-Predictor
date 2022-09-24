@@ -10,6 +10,7 @@ import DetailedResult from "../components/DetailedResult";
 //import Multiselect from "multiselect-react-dropdown";
 import Typewriter from "typewriter-effect";
 import { useRouter } from "next/router";
+import Overview from "../components/Overview";
 
 export default function Home() {
   const [tweet, setTweet] = useState("Ex. I'm sad..");
@@ -96,6 +97,10 @@ export default function Home() {
         <div className="mx-5 text-4xl text-white  font-extrabold grid place-items-center py-2">
           Tweets based Depression Predictors
         </div>
+        <div id="overview">
+          <Overview />
+        </div>
+
         <div className="grid  place-items-center mx-5">
           <div className="  text-gray-400 font-sans text-2xl font-bold mx-30">
             Accuracy of our models
