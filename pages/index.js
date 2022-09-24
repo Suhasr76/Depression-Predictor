@@ -103,13 +103,6 @@ export default function Home() {
           <Overview />
         </div>
 
-        <div className="grid  place-items-center mx-5">
-          <div className="  text-gray-400 font-sans text-2xl font-bold mx-30">
-            Accuracy of our models
-          </div>
-          <Graph />
-        </div>
-
         <div className="bg-transparent transition-all ring-1 ring-sky-400 rounded-sm m-[100px] p-10 grid place-items-center">
           {/* <div className="pb-3 text-sky-400 font-mono text-2xl font-bold">
               Enter the tweet
@@ -154,7 +147,7 @@ export default function Home() {
                 content_css: "dark",
                 skin: "oxide-dark",
                 height: 500,
-              
+
                 menubar: true,
                 plugins: [
                   "advlist autolink lists link image charmap print preview anchor",
@@ -216,17 +209,25 @@ export default function Home() {
         </div>
 
         {clicked && (
-          <div
-            id="results"
-            className="ml-[24vw] w-[50vw] m-3 px-10 py-5 ring-1 ring-sky-400 rounded-md"
-          >
-            <div className=" grid place-items-center text-3xl text-gray-300 font-bold font-sans">
-              Results -
-              <span className={`${count == -1 ? "hidden" : "show"}`}>
-                {result}
-              </span>
+          <div>
+            <div
+              id="results"
+              className="ml-[24vw] w-[50vw] m-3 px-10 py-5 ring-1 ring-sky-400 rounded-md"
+            >
+              <div className=" grid place-items-center text-3xl text-gray-300 font-bold font-sans">
+                Results -
+                <span className={`${count == -1 ? "hidden" : "show"}`}>
+                  {result}
+                </span>
+              </div>
+              <DetailedResult response={sample} />
             </div>
-            <DetailedResult response={sample} />
+            <div className="grid mt-16 place-items-center mx-5">
+              <div className="  text-gray-400 font-sans text-2xl font-bold mx-30">
+                Accuracy of our models
+              </div>
+              <Graph />
+            </div>
           </div>
         )}
       </div>
