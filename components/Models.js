@@ -59,7 +59,12 @@ export default function Models() {
           label
         </label>
       </div>
-
+      <div id="accuracy" className="mt-16 grid  place-items-center mx-5">
+        <div className="  text-white-400 font-sans text-2xl font-bold mx-30">
+          <i>Accuracy of our models</i>
+        </div>
+        <Graph />
+      </div>
       <div id="models" className=" flex flex-row space-x-20 mt-10 mx-20 py-10 ">
         <p className="text-sky-400 text-2xl font-extrabold text-center">
           Using the above columns correlation between different sets of columns
@@ -195,12 +200,6 @@ export default function Models() {
             ></iframe>
           </div>
         </CollapseCard>
-        <div className="mt-16 grid  place-items-center mx-5">
-          <div className="  text-white-400 font-sans text-2xl font-bold mx-30">
-            <i>Accuracy of our models</i>
-          </div>
-          <Graph />
-        </div>
       </div>
       {/* <div className="divleft">
         <h2>
