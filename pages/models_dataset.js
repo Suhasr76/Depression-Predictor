@@ -1,9 +1,32 @@
 import React from "react";
 import Models from "../components/Models";
+import Navbar from "../components/Navbar";
 
 export default function Model() {
   return (
-    <div>
+    <div className="">
+      <div className="sticky top-0 z-100">
+        <Navbar
+          links={[
+            {
+              title: "Home",
+              link: "/",
+            },
+            {
+              title: "Dataset",
+              link: "#dataset",
+            },
+            {
+              title: "Models",
+              link: "#models",
+            },
+            {
+              title: "Accuracy",
+              link: "#accuracy",
+            },
+          ]}
+        />
+      </div>
       <Models />
     </div>
   );

@@ -43,10 +43,10 @@ export default function Models() {
           tag of a text, such as an email or a newspaper story, using the Bayes
           theorem. <br />
           <br />
-          It calculates each tag's likelihood for a given sample and outputs the
+          It calculates each tags likelihood for a given sample and outputs the
           tag with the greatest chance. The Naive Bayes classifier is made up of
           a number of algorithms that all have one thing in common: each feature
-          being classed is unrelated to any other feature. A feature's existence
+          being classed is unrelated to any other feature. A features existence
           or absence has no bearing on the inclusion or exclusion of another
           feature.
         </p>
@@ -95,7 +95,7 @@ export default function Models() {
           The Gaussian probability density function can be used to make
           predictions by substituting the parameters with the new input value of
           the variable and as a result, the Gaussian function will give an
-          estimate for the new input value’s probability.{" "}
+          estimate for the new input values probability.{" "}
         </p>
         <br />
         <img src="./images/GNB.png" height="220" width="250" />

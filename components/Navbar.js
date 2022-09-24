@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Navbar() {
+export default function Navbar({ links }) {
   return (
     <div className=" h-[70px] w-screen bg-[url('/navbar.jpg')] bg-cover">
       <div className="pb-1 flex flex-row   ">
-        <div className="flex flex-row px-5 py-5">
+        <div className="flex flex-row justify-between px-5 py-5">
           <div className="ml-5 mt-1 px-2 py-2">
             <Link href="/">
               <a>
@@ -24,8 +24,23 @@ export default function Navbar() {
               </a>
             </Link>
           </div>
-          <div className="px-2 py-2 mx-3 h-10 w-20 ml-[120vh] rounded-lg text-center font-bold bg-transparent text-sky-400  hover:bg-sky-700">
-            <Link className=" px-3 py-2 bg-yellow-300" href="/">
+          <div className="ml-[500px] flex flex-row">
+            {links.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="transition-all delay-200 py-2 mx-5 px-4 h-10  rounded-lg text-center font-bold bg-transparent text-sky-400  hover:bg-sky-700"
+                >
+                  <Link className=" px-3 py-2" href={item.link}>
+                    <a>{item.title}</a>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* <div className="px-2 py-2 mx-3 h-10 w-20 ml-[120vh] rounded-lg text-center font-bold bg-transparent text-sky-400  hover:bg-sky-700">
+            <Link className=" px-3 py-2" href="/">
               <a>Home</a>
             </Link>
           </div>
@@ -33,7 +48,7 @@ export default function Navbar() {
             <Link href="/">
               <a>Models and Dataset</a>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
