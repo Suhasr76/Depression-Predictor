@@ -55,12 +55,14 @@ export default function Models() {
           tag of a text, such as an email or a newspaper story, using the Bayes
           theorem. <br />
           <br />
+ 
          
           {/* <YouTube videoId="8vv9julkQEA" 
             opts={opts} onReady={this._onReady} />; */}
           </div>
           <img src="./images/MNB.jpeg" height="250" width="250" />
         </div>
+ 
         <br />
        
       </div>

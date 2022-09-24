@@ -9,6 +9,7 @@ import Graph from "../components/Graph";
 import DetailedResult from "../components/DetailedResult";
 //import Multiselect from "multiselect-react-dropdown";
 import Typewriter from "typewriter-effect";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [tweet, setTweet] = useState("Ex. I'm sad..");
@@ -19,6 +20,7 @@ export default function Home() {
   const [clicked, setClicked] = useState(false);
   const vectorizerOptions = ["count", "td-idf"];
   const editorRef = useRef(null);
+  const router = useRouter();
   const sample = [
     { model11: 0 },
     { model2: 0 },
@@ -58,16 +60,38 @@ export default function Home() {
     setResponse(sample);
     viewResult(sample);
     setClicked(true);
+
+    router.push("#results");
   }
 
-  function vectorizerChange() {}
-
   return (
-    <div className="w-screen h-screen ">
+    <div className=" ">
+      <div className="sticky top-0 z-100">
+        <Navbar
+          links={[
+            {
+              title: "Home",
+              link: "/",
+            },
+            {
+              title: "Overview",
+              link: "#overview",
+            },
+            {
+              title: "Predict",
+              link: "#predict",
+            },
+            {
+              title: "Models and Dataset",
+              link: "/models_dataset",
+            },
+          ]}
+        />
+      </div>
       <Head>
         <title>Depression Detector</title>
       </Head>
-      <Navbar />
+
       <div className="py-10 w-screen h-min-screen  bg-cover bg-[url('/backgrounIndex.jpg')]">
         <div className="mx-5 text-4xl text-white  font-extrabold grid place-items-center py-2">
           Tweets based Depression Predictors
@@ -80,24 +104,31 @@ export default function Home() {
         </div>
 
         <div className="bg-transparent transition-all ring-1 ring-sky-400 rounded-sm m-[100px] p-10 grid place-items-center">
-          
-            {/* <div className="pb-3 text-sky-400 font-mono text-2xl font-bold">
+          {/* <div className="pb-3 text-sky-400 font-mono text-2xl font-bold">
               Enter the tweet
             </div> */}
           <div className="   ml-2  ">
-           <div className="text-4xl text-sky-400 font-bold    ml-40 pl-5 mb-4 font-poppins ">
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Enter the tweet...")
-                  .start()
-                  .pauseFor(1000)
-                  .deleteAll();
-              }}
-              options={{ loop: true }}
-            />
-         
-          </div>
+            <div className="text-4xl text-sky-400 font-bold    ml-40 pl-5 mb-4 font-poppins ">
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Enter the tweet...")
+                    .start()
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .typeString("Four More Years!")
+                    .pauseFor(500)
+                    .deleteAll()
+                    .typeString("Are you ready to celebrate!!")
+                    .pauseFor(500)
+                    .deleteAll()
+                    .typeString("Hi Twitter. Thank you")
+                    .pauseFor(500)
+                    .deleteAll();
+                }}
+                options={{ loop: true }}
+              />
+            </div>
             <input
               value={tweet}
               onChange={(e) => {
@@ -112,9 +143,9 @@ export default function Home() {
               onInit={(evt, editor) => (editorRef.current = editor)}
               initialValue="<p>This is the initial content of the editor.</p>"
               init={{
-                selector:'textarea',
-                content_css:'dark',
-                skin:'oxide-dark',
+                selector: "textarea",
+                content_css: "dark",
+                skin: "oxide-dark",
                 height: 500,
 
                 menubar: true,
@@ -178,7 +209,7 @@ export default function Home() {
         </div>
 
         {clicked && (
-          <div className=" ">
+          <div id="results" className=" ">
             <div className="text-3xl font-sans">Results</div>
             <DetailedResult response={sample} />
           </div>
