@@ -107,7 +107,7 @@ export default function Home() {
           {/* <div className="pb-3 text-sky-400 font-mono text-2xl font-bold">
               Enter the tweet
             </div> */}
-          <div className="   ml-2  ">
+          <div id="predict" className="   ml-2  ">
             <div className="text-4xl text-sky-400 font-bold    ml-40 pl-5 mb-4 font-poppins ">
               <Typewriter
                 onInit={(typewriter) => {
