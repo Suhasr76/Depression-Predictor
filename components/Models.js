@@ -1,15 +1,8 @@
 import React from "react";
- 
 import Graph from "./Graph";
 
 export default function Models() {
-  const opts = {
-    height: "390",
-    width: "640",
-    playVars: {
-      autoplay: 1,
-    },
-  };
+   
   // _onReady(event){
   //   event.target.pauseVideo();}
   return (
