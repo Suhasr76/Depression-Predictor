@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className=" h-[70px] w-screen bg-[url('/backgroundIndex.jpg')] bg-cover">
+    <div className=" h-[70px] w-screen bg-[url('/navbar.jpg')] bg-cover">
       <div className="pb-1 flex flex-row   ">
         <div className="flex flex-row px-5 py-5">
           <div className="ml-5 mt-1 px-2 py-2">
@@ -11,7 +11,7 @@ export default function Navbar() {
               <a>
                 <div className="flex flex-row ">
                   <img
-                    className="hover:scale-105 duration-200"
+                    className="hover:scale-105 duration-200 -mt-5"
                     color="#1da1f2"
                     src="/mlicon.png"
                     height={45}

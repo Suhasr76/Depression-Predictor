@@ -8,9 +8,10 @@ import axios from "axios";
 import Graph from "../components/Graph";
 import DetailedResult from "../components/DetailedResult";
 //import Multiselect from "multiselect-react-dropdown";
+import Typewriter from "typewriter-effect";
 
 export default function Home() {
-  const [tweet, setTweet] = useState("I'm sad..");
+  const [tweet, setTweet] = useState("Ex. I'm sad..");
   const [tweetHTML, setTweetHTML] = useState("");
   const [response, setResponse] = useState({});
   const [vectorizer, setVectorizer] = useState("");
@@ -67,28 +68,42 @@ export default function Home() {
         <title>Depression Detector</title>
       </Head>
       <Navbar />
-      <div className="py-10 w-screen h-screen  bg-cover bg-[url('/backgroundIndex.jpg')]">
-        <div className="mx-5 text-4xl text-black  font-extrabold grid place-items-center py-2">
+      <div className="py-10 w-screen h-min-screen  bg-cover bg-[url('/backgrounIndex.jpg')]">
+        <div className="mx-5 text-4xl text-white  font-extrabold grid place-items-center py-2">
           Tweets based Depression Predictors
         </div>
         <div className="grid  place-items-center mx-5">
-          <div className="  font-sans text-2xl font-bold mx-30">
+          <div className="  text-gray-400 font-sans text-2xl font-bold mx-30">
             Accuracy of our models
           </div>
           <Graph />
         </div>
 
-        <div className="bg-blue-200  transition-all ring-1 ring-black rounded-sm m-[100px] p-10 grid place-items-center">
-          <div className="grid place-items-center">
-            <div className="pb-3 font-mono text-2xl font-bold">
-              Enter the Tweet
-            </div>
+        <div className="bg-transparent transition-all ring-1 ring-sky-400 rounded-sm m-[100px] p-10 grid place-items-center">
+          
+            {/* <div className="pb-3 text-sky-400 font-mono text-2xl font-bold">
+              Enter the tweet
+            </div> */}
+          <div className="   ml-2  ">
+           <div className="text-4xl text-sky-400 font-bold    ml-40 pl-5 mb-4 font-poppins ">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Enter the tweet...")
+                  .start()
+                  .pauseFor(1000)
+                  .deleteAll();
+              }}
+              options={{ loop: true }}
+            />
+         
+          </div>
             <input
               value={tweet}
               onChange={(e) => {
                 setTweet(e.target.value);
               }}
-              className="px-3 py-2 ring-1 ring-gray-800 w-[50vw]"
+              className="px-3 py-2 ring-1 ring-gray-800 w-[50vw] "
             ></input>
           </div>
           <div className="my-10">
@@ -123,7 +138,7 @@ export default function Home() {
               })}
             /> */}
             <select
-              className="w-[14vw] pl-1 ring-1 ring-gray-300 rounded-sm"
+              className="w-[14vw] pl-1 ring-1 ring-sky-400  mt-5 mx-40 bg-black text-sky-400 text-center rounded-sm"
               value={vectorizer}
               onChange={(e) => {
                 setVectorizer(e.target.value);
@@ -140,7 +155,7 @@ export default function Home() {
             </select>
           </div>
           <button
-            className="px-5 py-3 my-3 bg-blue-300 rounded-lg font-semibold hover:scale-105 transition-all"
+            className="px-5 py-3 mr-10 text- my-3 text-white bg-sky-400 rounded-lg font-semibold hover:scale-105 transition-all"
             /* onClick={() => {
                 log;
                 predictTweet;

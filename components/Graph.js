@@ -37,8 +37,8 @@ export default function Graph() {
   };
   return (
     <div>
-      <div className="w-[50vw] flex justify-center">
-        <Bar data={data} />
+      <div className="w-[50vw] py-20 flex justify-center text-white font-bold">
+        <Bar className="text-white font-bold " data={data} />
       </div>
     </div>
   );
