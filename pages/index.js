@@ -106,13 +106,18 @@ export default function Home() {
               className="px-3 py-2 ring-1 ring-gray-800 w-[50vw] "
             ></input>
           </div>
-          <div className="my-10">
+          <div className="my-10 ml-2 w-[110vh]">
             <Editor
+              tinymceScriptSrc="/tinymce_6.2.0/tinymce/js/tinymce/tinymce.min.js"
               onInit={(evt, editor) => (editorRef.current = editor)}
               initialValue="<p>This is the initial content of the editor.</p>"
               init={{
+                selector:'textarea',
+                content_css:'dark',
+                skin:'oxide-dark',
                 height: 500,
-                menubar: false,
+
+                menubar: true,
                 plugins: [
                   "advlist autolink lists link image charmap print preview anchor",
                   "searchreplace visualblocks code fullscreen",
@@ -138,7 +143,7 @@ export default function Home() {
               })}
             /> */}
             <select
-              className="w-[14vw] pl-1 ring-1 ring-sky-400  mt-5 mx-40 bg-black text-sky-400 text-center rounded-sm"
+              className="w-[14vw] ml-[38vh] ring-1 ring-sky-400  mt-5 mx-40 bg-black text-sky-400 text-center rounded-sm"
               value={vectorizer}
               onChange={(e) => {
                 setVectorizer(e.target.value);
