@@ -154,7 +154,7 @@ export default function Home() {
                 content_css: "dark",
                 skin: "oxide-dark",
                 height: 500,
-
+              
                 menubar: true,
                 plugins: [
                   "advlist autolink lists link image charmap print preview anchor",

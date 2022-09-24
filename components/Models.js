@@ -1,5 +1,5 @@
 import React from "react";
-import YouTube from "react-youtube";
+ 
 import Graph from "./Graph";
 
 export default function Models() {
@@ -90,8 +90,14 @@ export default function Models() {
           <img src="./images/MNB.jpeg" height="250" width="250" />
         </div>
 
-        <br />
+        
+      <div className="my-20 ml-[50vh] ratio ratio-16x9">
+      <iframe width="720" height="360" src="https://www.youtube.com/embed/8vv9julkQEA" title="YouTube video player" frameborder="0"
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      </div>
+
+
       <div class="divright text-white font-extrabold text-center pt-10 text-2xl">
         <h2>
           <i>
@@ -109,6 +115,13 @@ export default function Models() {
           </div>
         </div>
       </div>
+
+      <div className="my-20 ml-[50vh] ratio ratio-16x9">
+      <iframe width="720" height="360" src="https://www.youtube.com/embed/Fn_U2OG1uqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+       gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+
       <div class="divleft text-white font-extrabold text-center pt-10 text-2xl">
         <h2>
           <i>
@@ -131,6 +144,11 @@ export default function Models() {
           <img src="./images/GNB.png" height="220" width="250" />
         </div>
       </div>
+
+      <div className="my-20 ml-[50vh] ratio ratio-16x9">
+      <iframe width="720" height="360" src="https://www.youtube.com/embed/H3EjCKtlVog" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+       gyroscope; picture-in-picture" allowfullscreen></iframe>   </div>
+
       <div class="divright text-white font-extrabold text-center pt-10 text-2xl">
         <h2>
           <i>
@@ -140,22 +158,28 @@ export default function Models() {
         <div className="flex flex-row space-x-20 mx-20 py-10 ">
           <img src="./images/SequentialRNN.jpeg" height="230" width="250" />
           <div className="text-gray-400 text-2xl text-center font-extrabold">
-            <p class="p">
-              Recurrent Neural Network (RNN) is a Deep learning algorithm and it
-              is a type of Artificial Neural Network architecture that is
-              specialized for processing sequential data. RNNs are mostly used
-              in the field of Natural Language Processing (NLP).
-              <br />
-            </p>
-            <br />
-          </div>
-        </div>
+          <p class="p">
+    
+          Recurrent Neural Network (RNN) is a Deep learning algorithm and it is
+          a type of Artificial Neural Network architecture that is specialized
+          for processing sequential data. RNNs are mostly used in the field of
+          Natural Language Processing (NLP).
+          <br />
+         
+        </p>
+        <br /> <br /> <br /></div></div>
+
+        <div className="my-20 ml-[50vh] ratio ratio-16x9">
+        <iframe width="720" height="360" src="https://www.youtube.com/embed/SBTbLN1W1RY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <div id="accuracy" className="grid mt-10  place-items-center mx-5">
-        <div className="  text-gray-200 font-mono text-4xl font-bold mx-30">
-          Accuracy of our models
+
+        <div className="grid  place-items-center mx-5">
+          <div className="  text-white-400 font-sans text-2xl font-bold mx-30">
+            <i>Accuracy of our models</i>
+          </div>
+          <Graph />
         </div>
-        <Graph />
       </div>
       {/* <div class="divleft">
         <h2>
