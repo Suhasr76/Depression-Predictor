@@ -18,7 +18,7 @@ function CollapseCard({
             setIsOpen(!isOpen);
           }}
         >
-          <span className="text-xl text-left font-semibold text-gray-600 pb-3 pr-2 cursor-pointer">
+          <span className="text-left text-white font-extrabold pt-10 text-2xl pb-3 pr-2 cursor-pointer">
             {title}
           </span>
           {/* Up Arrow */}
