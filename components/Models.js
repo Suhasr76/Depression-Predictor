@@ -105,7 +105,7 @@ export default function Models() {
         </CollapseCard>
       </div>
 
-      <div class="divright text-white font-extrabold text-center pt-10 text-2xl">
+      <div className="divright text-white font-extrabold text-center pt-10 text-2xl">
         <CollapseCard title="GLOVE">
           <div className="flex flex-row space-x-20 mx-20 py-10 ">
             <img src="./images/Glove.jpeg" height="250" width="250" />
@@ -133,11 +133,11 @@ export default function Models() {
         </CollapseCard>
       </div>
 
-      <div class="divleft text-white font-extrabold text-center pt-10 text-2xl">
+      <div className="divleft text-white font-extrabold text-center pt-10 text-2xl">
         <CollapseCard title="Gaussian Naive Bayes">
           <div className="flex flex-row space-x-20 mx-20 py-10 ">
             <div className="text-sky-400 text-2xl text-center font-extrabold">
-              <p class="p">
+              <p className="p">
                 Naïve Bayes is a probabilistic machine learning algorithm used
                 for many classification functions and is based on the Bayes
                 theorem. Gaussian Naïve Bayes is the extension of naïve Bayes.
@@ -166,12 +166,12 @@ export default function Models() {
         </CollapseCard>
       </div>
 
-      <div class="divright text-white font-extrabold text-center pt-10 text-2xl">
+      <div className="divright text-white font-extrabold text-center pt-10 text-2xl">
         <CollapseCard title="Sequential RNN">
           <div className="flex flex-row space-x-20 mx-20 py-10 ">
             <img src="./images/SequentialRNN.jpeg" height="230" width="250" />
             <div className="text-gray-400 text-2xl text-center font-extrabold">
-              <p class="p">
+              <p className="p">
                 Recurrent Neural Network (RNN) is a Deep learning algorithm and
                 it is a type of Artificial Neural Network architecture that is
                 specialized for processing sequential data. RNNs are mostly used
@@ -202,14 +202,14 @@ export default function Models() {
           <Graph />
         </div>
       </div>
-      {/* <div class="divleft">
+      {/* <div className="divleft">
         <h2>
           <i>
             <b>TBD</b>
           </i>
         </h2>
         <br />
-        <p class="p"></p>
+        <p className="p"></p>
       </div> */}
     </div>
   );

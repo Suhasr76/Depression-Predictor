@@ -6,7 +6,7 @@ export default function Overview() {
     <div>
       <Head></Head>
       <h2>Overview</h2>
-      <div class="d1">
+      <div className="d1">
         <p>
           Depression is a mood disorder that causes a persistent feeling of
           sadness and loss of interest. Also called major depressive disorder or
@@ -39,11 +39,11 @@ export default function Overview() {
         src="./images/how-to-cope-with-anxiety-and-depression-722x406.jpg"
         height="250"
         width="450"
-        class="img_depression_page_1"
+        className="img_depression_page_1"
       />
 
       <h2>Symptoms and patterns</h2>
-      <div class="d2">
+      <div className="d2">
         <p>
           During a depressive episode, the person experiences depressed mood
           (feeling sad, irritable, empty) or a loss of pleasure or interest in
@@ -143,10 +143,10 @@ export default function Overview() {
         src="./images/sad-lonely-woman-in-depression-with-flying-hair.jpeg"
         height="300"
         width="400"
-        class="img_depression_page_1"
+        className="img_depression_page_1"
       />
       <h2>Prevention</h2>
-      <div class="d1">
+      <div className="d1">
         <ul>
           <li>
             <b>Take steps to control stress</b>, to increase your resilience and
