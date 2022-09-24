@@ -1,11 +1,13 @@
 import react, { useState } from "react";
 
-function Item({ model, result }) {
+function Item({ model, result, count }) {
   return (
-    <div className="py-1 px-3 flex flex-row justify-center">
-      <div className="text-lg font-bold font-sans">{model} - </div>
+    <div className="py-1 text-gray-400 px-3 flex flex-row justify-center">
+      <div className="text-lg font-bold font-sans">
+        {count}. {model} -{" "}
+      </div>
       <div className={`text-${result ? "red-500" : "blue-500"}`}>
-        {result ? "Depressed" : "Not Depressed"}
+        {result ? " Depressed" : " Not Depressed"}
       </div>
     </div>
   );
@@ -25,7 +27,14 @@ export default function DetailedResult({ response }) {
     <div>
       <div className="my-4 mx-3">
         {newResponse.map((item, index) => {
-          return <Item key={index} model={item.model} result={item.result} />;
+          return (
+            <Item
+              key={index}
+              count={index + 1}
+              model={item.model}
+              result={item.result}
+            />
+          );
         })}
       </div>
     </div>

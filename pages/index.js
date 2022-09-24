@@ -19,18 +19,20 @@ export default function Home() {
   const [vectorizer, setVectorizer] = useState("");
   const [result, setResult] = useState("");
   const [clicked, setClicked] = useState(false);
+  const [showDetailed, setShowDetailed] = useState(false);
   const vectorizerOptions = ["count", "td-idf"];
   const editorRef = useRef(null);
   const router = useRouter();
+  var count = 0;
   const sample = [
     { model11: 0 },
-    { model2: 0 },
+    { model2: 1 },
     { model3: 1 },
     { model4: 0 },
     { model5: 1 },
   ];
   function viewResult(sample) {
-    var count = 0;
+    count = 0;
     //console.log(sample);
     for (let i = 0; i < sample.length; i++) {
       //console.log(sample[i]);
@@ -214,8 +216,16 @@ export default function Home() {
         </div>
 
         {clicked && (
-          <div id="results" className=" ">
-            <div className="text-3xl font-sans">Results</div>
+          <div
+            id="results"
+            className="ml-[24vw] w-[50vw] m-3 px-10 py-5 ring-1 ring-sky-400 rounded-md"
+          >
+            <div className=" grid place-items-center text-3xl text-gray-300 font-bold font-sans">
+              Results -
+              <span className={`${count == -1 ? "hidden" : "show"}`}>
+                {result}
+              </span>
+            </div>
             <DetailedResult response={sample} />
           </div>
         )}
