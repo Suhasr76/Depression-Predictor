@@ -198,21 +198,17 @@ export default function Home() {
             </select>
           </div>
           <button
-            className="px-5 py-3 mr-10 text- my-3 text-white bg-sky-400 rounded-lg font-semibold hover:scale-105 transition-all"
+            className="px-5 py-3 mr-10 text- my-3 font-extrabold text-white bg-sky-400 rounded-lg   hover:scale-105 transition-all"
             /* onClick={() => {
                 log;
                 predictTweet;
               }} */
             onClick={predictTweet}
           >
-            Log editor content
+            Submit
           </button>
 
-          <div>{JSON.stringify(response)}</div>
-          <div>{JSON.stringify(tweet)}</div>
-          <div>{JSON.stringify(tweetHTML)}</div>
-          <div>{JSON.stringify(vectorizer)}</div>
-          <div>{JSON.stringify(result)}</div>
+         
         </div>
 
         {clicked && (

@@ -54,7 +54,7 @@ export default function Models() {
         </label>
       </div>
       <div id="accuracy" className="mt-16 grid  place-items-center mx-5">
-        <div className="  text-white-400 font-sans text-2xl font-bold mx-30">
+        <div className="  text-white  font-sans text-2xl font-bold mx-30">
           <i>Accuracy of our models</i>
         </div>
         <Graph />
