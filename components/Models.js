@@ -1,6 +1,6 @@
 import React from "react";
 import YouTube from 'react-youtube';
-
+import Graph from "./Graph";
 export default function Models() {
  
   const opts={
@@ -56,16 +56,19 @@ export default function Models() {
           theorem. <br />
           <br />
  
-         
-          {/* <YouTube videoId="8vv9julkQEA" 
-            opts={opts} onReady={this._onReady} />; */}
+          
           </div>
           <img src="./images/MNB.jpeg" height="250" width="250" />
         </div>
- 
-        <br />
-       
+
+        
+      <div className="my-20 ml-[50vh] ratio ratio-16x9">
+      <iframe width="720" height="360" src="https://www.youtube.com/embed/8vv9julkQEA" title="YouTube video player" frameborder="0"
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      </div>
+
+
       <div class="divright text-white font-extrabold text-center pt-10 text-2xl">
         <h2>
           <i>
@@ -86,6 +89,13 @@ export default function Models() {
         </div>
         </div>
       </div>
+
+      <div className="my-20 ml-[50vh] ratio ratio-16x9">
+      <iframe width="720" height="360" src="https://www.youtube.com/embed/Fn_U2OG1uqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+       gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+
       <div class="divleft text-white font-extrabold text-center pt-10 text-2xl">
         <h2>
           <i>
@@ -106,9 +116,14 @@ export default function Models() {
         <br />
         </div>
         <img src="./images/GNB.png" height="220" width="250" />
-    
+        <br />
       </div>
       </div>
+
+      <div className="my-20 ml-[50vh] ratio ratio-16x9">
+      <iframe width="720" height="360" src="https://www.youtube.com/embed/H3EjCKtlVog" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+       gyroscope; picture-in-picture" allowfullscreen></iframe>   </div>
+
       <div class="divright text-white font-extrabold text-center pt-10 text-2xl">
         <h2>
           <i>
@@ -128,8 +143,19 @@ export default function Models() {
           <br />
          
         </p>
-        <br /></div></div>
-       
+        <br /> <br /> <br /></div></div>
+
+        <div className="my-20 ml-[50vh] ratio ratio-16x9">
+        <iframe width="720" height="360" src="https://www.youtube.com/embed/SBTbLN1W1RY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+        <div className="grid  place-items-center mx-5">
+          <div className="  text-white-400 font-sans text-2xl font-bold mx-30">
+            <i>Accuracy of our models</i>
+          </div>
+          <Graph />
+        </div>
       </div>
       {/* <div class="divleft">
         <h2>

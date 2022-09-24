@@ -5,7 +5,7 @@ export default function Navbar({ links }) {
   return (
     <div className=" h-[70px] w-screen bg-[url('/navbar.jpg')] bg-cover">
       <div className="pb-1 flex flex-row   ">
-        <div className="flex flex-row justify-between px-5 py-5">
+        <div className="flex flex-row  px-5 py-5">
           <div className="ml-5 mt-1 px-2 py-2">
             <Link href="/">
               <a>
@@ -24,7 +24,7 @@ export default function Navbar({ links }) {
               </a>
             </Link>
           </div>
-          <div className="ml-[500px] flex flex-row">
+          <div className="ml-[800px] flex flex-row">
             {links.map((item, index) => {
               return (
                 <div
