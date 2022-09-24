@@ -29,7 +29,7 @@ export default function Navbar({ links }) {
               return (
                 <div
                   key={index}
-                  className="transition-all delay-200 py-2 mx-5 px-4 h-10  rounded-lg text-center font-bold bg-transparent text-sky-400  hover:bg-sky-700"
+                  className="transition-all delay-200 py-2 mx-3 px-2 h-10  rounded-lg text-center font-bold bg-transparent text-sky-400  hover:bg-sky-700"
                 >
                   <Link className=" px-3 py-2" href={item.link}>
                     <a>{item.title}</a>
