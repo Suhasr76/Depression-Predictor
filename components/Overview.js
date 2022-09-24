@@ -37,7 +37,7 @@ export default function Overview() {
         src="./images/how-to-cope-with-anxiety-and-depression-722x406.jpg"
         height="250"
         width="450"
-        class="img_depression_page_1"
+        className="img_depression_page_1"
       />
 </div>
 <div className="mx-5 text-2xl text-white  font-extrabold grid place-items-center py-2"><i>Symptoms and patterns</i></div>
@@ -96,7 +96,7 @@ export default function Overview() {
         src="./images/sad-lonely-woman-in-depression-with-flying-hair.jpeg"
         height="300"
         width="400"
-        class="img_depression_page_1"
+        className="img_depression_page_1"
       />
      
        <div className="mx-5 text-2xl text-white  font-extrabold grid place-items-center py-2"><i>Prevention</i></div>

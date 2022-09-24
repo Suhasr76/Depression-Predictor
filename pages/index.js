@@ -144,7 +144,7 @@ export default function Home() {
               className="px-3 py-2 ring-1 ring-gray-800 w-[50vw] "
             ></input>
           </div>
-          <div className="my-10 ml-2 w-[110vh]">
+          <div className="my-10 ml-2 w-[110vh] overflow-hidden">
             <Editor
               tinymceScriptSrc="/tinymce_6.2.0/tinymce/js/tinymce/tinymce.min.js"
               onInit={(evt, editor) => (editorRef.current = editor)}
