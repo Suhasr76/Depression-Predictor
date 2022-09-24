@@ -13,7 +13,7 @@ export default function Overview() {
           clinical depression, it affects how you feel, think and behave and can
           lead to a variety of emotional and physical problems. You may have
           trouble doing normal day-to-day activities, and sometimes you may feel
-          as if life isn't worth living.
+          as if life isnt worth living.
         </p>
         <ul>
           <li>
@@ -70,14 +70,14 @@ export default function Overview() {
           <br />
           A depressive episode can be categorised as mild, moderate, or severe
           depending on the number and severity of symptoms, as well as the
-          impact on the individual’s functioning.
+          impact on the individuals functioning.
           <br />
           <br />
           There are different patterns of mood disorders including:
         </p>
         <ul>
           <li>
-            single episode depressive disorder, meaning the person’s first and
+            single episode depressive disorder, meaning the persons first and
             only episode
           </li>
           <br />
