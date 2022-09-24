@@ -4,7 +4,7 @@ import { useState } from "react";
 function CollapseCard({
   title = "Enter the Details here",
   children,
-  checkIsOpen = false,
+  checkIsOpen = true,
   padding = "py-5",
 }) {
   const [isOpen, setIsOpen] = useState(checkIsOpen);
