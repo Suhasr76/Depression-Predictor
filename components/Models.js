@@ -2,36 +2,41 @@ import React from "react";
 
 export default function Models() {
   return (
-    <div>
-      <div class="Data">
-        <p>The Dataset collected had 11 columns which includes the following</p>
-        <ul>
-          <li>Index</li>
-          <li>post_id</li>
-          <li>post_created</li>
-          <li>post_text</li>
-          <li>user_id</li>
-          <li>followers</li>
-          <li>friends</li>
-          <li>favourites</li>
-          <li>statuses</li>
-          <li>retweets</li>
-          <li>label</li>
-        </ul>
-        <p>
+    <div className="bg-[url('/backgrounIndex.jpg')] min-w-screen bg-cover  h-[900vh]">
+     
+        <p className="text-white font-extrabold text-center pt-10 text-4xl">The Dataset collected had 11 columns which includes the following</p>
+        <div className="grid grid-cols-11 w-full gap-2 py-10  text-white content-center
+        divide-x text-center">
+          <label className="  text-sky-400 border-l-2 border-sky-400">Index</label>
+          <label className="  text-gray-400 border-l-2 border-sky-400">post_id</label>
+          <label className="   text-sky-400 border-l-2 border-sky-400">post_created</label>
+          <label className="  text-gray-400 border-l-2 border-sky-400">post_text</label>
+          <label className="   text-sky-400 border-l-2 border-sky-400">user_id</label>
+          <label className="   text-gray-400 border-l-2 border-sky-400">followers</label>
+          <label className="   text-sky-400 border-l-2 border-sky-400">friends</label>
+          <label className="  text-gray-400 border-l-2 border-sky-400">favourites</label>
+          <label className="  text-sky-400 border-l-2 border-sky-400">statuses</label>
+          <label className="  text-gray-400 border-l-2 border-sky-400">retweets</label>
+          <label className="  text-sky-400 border-l-2 border-sky-400">label</label>
+        </div>
+        
+        <div className="flex flex-row space-x-20 mx-20 py-10 ">
+        <p className="text-sky-400 text-2xl font-extrabold">
           Using the above columns correlation between different sets of columns
           has been found. Out of all the columns the one which mattered the most
-          was, label indiacting if the person was depressed or not. The
-          correlation values with respect to label is spurious which led us to
+          was, label indiacting if the person was depressed or not. </p>
+           
+        <p className="text-gray-400 text-2xl font-extrabold"> The correlation values with respect to label is spurious which led us to
           dropping out some columns leaving us with post_text and label as the
           final 2 columns. Using these we have trained 5 different models and
           determined the final result by voting of the predictions from each of
           the model.
         </p>
-        <p>The models which were used are:</p>
+         </div>
+        <p className="text-white font-extrabold text-center pt-10 text-4xl">The models which were used are:</p>
         <br />
-      </div>
-      <div class="divleft">
+      
+      <div className="py-10 " >
         <h2>
           <i>
             <b>Multionomial Naive Bayes</b>
