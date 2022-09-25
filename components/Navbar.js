@@ -3,7 +3,9 @@ import React from "react";
 
 export default function Navbar({ links }) {
   return (
-    <div className=" h-[70px] w-screen bg-[url('/navbar.jpg')] bg-cover">
+    <div className=" h-[70px] w-screen bg-[url('/navbar.jpg')] bg-cover z-50"
+      style={{zIndex: 10}}
+    >
       <div className="pb-1 flex flex-row   ">
         <div className="flex flex-row  px-5 py-5">
           <div className="ml-5 mt-1 px-2 py-2">

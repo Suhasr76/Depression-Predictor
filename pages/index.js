@@ -32,16 +32,7 @@ export default function Home() {
     { model5: 1 },
   ];
   function viewResult(sample) {
-    count = 0;
-    //console.log(sample);
-    for (let i = 0; i < sample.length; i++) {
-      //console.log(sample[i]);
-      let temp = Object.keys(sample[i]);
-      count += sample[i][temp];
-      //console.log(count);
-    }
-    const mid = sample.length / 2;
-    if (count > mid) {
+    if (sample==1) {
       setResult("Depressed :(");
     } else {
       setResult("Happy Person :))");
@@ -55,14 +46,12 @@ export default function Home() {
       setTweetHTML(editorRef.current.getContent({format: 'text'}));
     }
     const data = {
-      tweet: tweetHTML,
+      text: editorRef.current.getContent({format: 'text'}),
     };
-    console.log("yoooooooooo",data);
     const response = await axios.post("/api/predict", data);
     setResponse(response.data);
-
-    setResponse(sample);
-    viewResult(sample);
+    console.log(response.data);
+    viewResult(response.data.result);
     setClicked(true);
 
     router.push("#results");
@@ -70,7 +59,7 @@ export default function Home() {
 
   return (
     <div className=" ">
-      <div className="sticky top-0 z-100">
+      <div className="sticky top-0 z-50">
         <Navbar
           links={[
             {
@@ -138,8 +127,9 @@ export default function Home() {
               className="px-3 py-2 ring-1 ring-gray-800 w-[50vw] "
             ></input>
           </div>
-          <div className="my-10 ml-2 w-[110vh] overflow-hidden">
+          <div className="my-10 ml-2 w-[110vh] overflow-hidden z-10">
             <Editor
+              style={{ zIndex: 100 }}
               tinymceScriptSrc="/tinymce_6.2.0/tinymce/js/tinymce/tinymce.min.js"
               onInit={(evt, editor) => (editorRef.current = editor)}
               initialValue="<p>This is the initial content of the editor.</p>"
@@ -164,36 +154,10 @@ export default function Home() {
                   "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
               }}
             />
-            {/* <Multiselect
-              value={vectorizer}
-              onChange={setVectorizer}
-              options={vectorizerOptions.map((item, index) => {
-                return {
-                  label: item,
-                  value: item,
-                };
-              })}
-            /> */}
-            <select
-              className="w-[14vw] ml-[38vh] ring-1 ring-sky-400  mt-5 mx-40 bg-black text-sky-400 text-center rounded-sm"
-              value={vectorizer}
-              onChange={(e) => {
-                setVectorizer(e.target.value);
-              }}
-            >
-              <option value="">Select</option>
-              {vectorizerOptions.map((item, index) => {
-                return (
-                  <option key={index} value={item}>
-                    {item}
-                  </option>
-                );
-              })}
-            </select>
           </div>
-          <button
+          <button id="results"
             className="px-5 py-3 mr-10 text- my-3 font-extrabold text-white bg-sky-400 rounded-lg   hover:scale-105 transition-all"
-            onClick={predictTweet}
+            onClick={()=>{predictTweet()}}
           >
             Submit
           </button>
@@ -202,27 +166,24 @@ export default function Home() {
         </div>
 
         {clicked && (
-          <div>
+          <div >
             <div
-              id="results"
+              
               className="ml-[24vw] w-[50vw] m-3 px-10 py-5 ring-1 ring-sky-400 rounded-md"
             >
               <div className=" grid place-items-center text-3xl text-gray-300 font-bold font-sans">
-                Results -
-                <span className={`${count == -1 ? "hidden" : "show"}`}>
-                  {result}
-                </span>
+                Results - {response.result}
               </div>
-              <DetailedResult response={sample} />
             </div>
-            <div className="grid mt-16 place-items-center mx-5">
+            
+          </div>
+        )}
+        <div className="grid mt-16 place-items-center mx-5">
               <div className="  text-gray-400 font-sans text-2xl font-bold mx-30">
                 Accuracy of our models
               </div>
               <Graph />
             </div>
-          </div>
-        )}
       </div>
     </div>
   );
