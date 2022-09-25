@@ -2,9 +2,12 @@ import axios from "axios";
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    console.log("[*] Got Request to add a new user.");
-    const url = "";
+    console.log("[*] Got Request to predict");
+    const url = "http://localhost";
     const payload = req.body;
+    console.log("[*] Payload: ", payload);
+    const response = await axios.post(url, payload);
+
     /* try {
       const response = await axios.post(url, payload);
       if (response.status === 200) {

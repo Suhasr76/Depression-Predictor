@@ -51,11 +51,11 @@ export default function Home() {
 
   async function predictTweet() {
     if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-      setTweetHTML(editorRef.current.getContent());
+      console.log(editorRef.current.getContent({format: 'text'}));
+      setTweetHTML(editorRef.current.getContent({format: 'text'}));
     }
     const data = {
-      tweet: tweet,
+      tweet: tweetHTML,
     };
     const response = await axios.post("/api/predict", data);
     setResponse(response.data);
