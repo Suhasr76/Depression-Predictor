@@ -51,12 +51,13 @@ export default function Home() {
 
   async function predictTweet() {
     if (editorRef.current) {
-      console.log(editorRef.current.getContent());
-      setTweetHTML(editorRef.current.getContent());
+      console.log(editorRef.current.getContent({format: 'text'}));
+      setTweetHTML(editorRef.current.getContent({format: 'text'}));
     }
     const data = {
-      tweet: tweet,
+      tweet: tweetHTML,
     };
+    console.log("yoooooooooo",data);
     const response = await axios.post("/api/predict", data);
     setResponse(response.data);
 
@@ -192,10 +193,6 @@ export default function Home() {
           </div>
           <button
             className="px-5 py-3 mr-10 text- my-3 font-extrabold text-white bg-sky-400 rounded-lg   hover:scale-105 transition-all"
-            /* onClick={() => {
-                log;
-                predictTweet;
-              }} */
             onClick={predictTweet}
           >
             Submit
