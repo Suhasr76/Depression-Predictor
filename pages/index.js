@@ -57,6 +57,7 @@ export default function Home() {
     const data = {
       tweet: tweetHTML,
     };
+    console.log("yoooooooooo",data);
     const response = await axios.post("/api/predict", data);
     setResponse(response.data);
 
@@ -103,13 +104,6 @@ export default function Home() {
           <Overview />
         </div>
 
-        <div className="grid  place-items-center mx-5">
-          <div className="  text-gray-400 font-sans text-2xl font-bold mx-30">
-            Accuracy of our models
-          </div>
-          <Graph />
-        </div>
-
         <div className="bg-transparent transition-all ring-1 ring-sky-400 rounded-sm m-[100px] p-10 grid place-items-center">
           {/* <div className="pb-3 text-sky-400 font-mono text-2xl font-bold">
               Enter the tweet
@@ -144,7 +138,7 @@ export default function Home() {
               className="px-3 py-2 ring-1 ring-gray-800 w-[50vw] "
             ></input>
           </div>
-          <div className="my-10 ml-2 w-[110vh]">
+          <div className="my-10 ml-2 w-[110vh] overflow-hidden">
             <Editor
               tinymceScriptSrc="/tinymce_6.2.0/tinymce/js/tinymce/tinymce.min.js"
               onInit={(evt, editor) => (editorRef.current = editor)}
@@ -154,7 +148,7 @@ export default function Home() {
                 content_css: "dark",
                 skin: "oxide-dark",
                 height: 500,
-              
+
                 menubar: true,
                 plugins: [
                   "advlist autolink lists link image charmap print preview anchor",
@@ -198,35 +192,35 @@ export default function Home() {
             </select>
           </div>
           <button
-            className="px-5 py-3 mr-10 text- my-3 text-white bg-sky-400 rounded-lg font-semibold hover:scale-105 transition-all"
-            /* onClick={() => {
-                log;
-                predictTweet;
-              }} */
+            className="px-5 py-3 mr-10 text- my-3 font-extrabold text-white bg-sky-400 rounded-lg   hover:scale-105 transition-all"
             onClick={predictTweet}
           >
-            Log editor content
+            Submit
           </button>
 
-          <div>{JSON.stringify(response)}</div>
-          <div>{JSON.stringify(tweet)}</div>
-          <div>{JSON.stringify(tweetHTML)}</div>
-          <div>{JSON.stringify(vectorizer)}</div>
-          <div>{JSON.stringify(result)}</div>
+         
         </div>
 
         {clicked && (
-          <div
-            id="results"
-            className="ml-[24vw] w-[50vw] m-3 px-10 py-5 ring-1 ring-sky-400 rounded-md"
-          >
-            <div className=" grid place-items-center text-3xl text-gray-300 font-bold font-sans">
-              Results -
-              <span className={`${count == -1 ? "hidden" : "show"}`}>
-                {result}
-              </span>
+          <div>
+            <div
+              id="results"
+              className="ml-[24vw] w-[50vw] m-3 px-10 py-5 ring-1 ring-sky-400 rounded-md"
+            >
+              <div className=" grid place-items-center text-3xl text-gray-300 font-bold font-sans">
+                Results -
+                <span className={`${count == -1 ? "hidden" : "show"}`}>
+                  {result}
+                </span>
+              </div>
+              <DetailedResult response={sample} />
             </div>
-            <DetailedResult response={sample} />
+            <div className="grid mt-16 place-items-center mx-5">
+              <div className="  text-gray-400 font-sans text-2xl font-bold mx-30">
+                Accuracy of our models
+              </div>
+              <Graph />
+            </div>
           </div>
         )}
       </div>

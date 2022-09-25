@@ -17,12 +17,12 @@ export default function Model() {
               link: "#dataset",
             },
             {
-              title: "Models",
-              link: "#models",
-            },
-            {
               title: "Accuracy",
               link: "#accuracy",
+            },
+            {
+              title: "Models",
+              link: "#models",
             },
           ]}
         />
